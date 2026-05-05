@@ -612,53 +612,190 @@ higher order function
 // let ans = hof(multiply,10,40)
 // console.log(ans)
 /*==================================== Question No 40 =========================================
-
+callback function
 ======================================= Answer =====================================*/
-function cb(){
-    console.log('hello')
-}
+// function cb(){
+//     console.log('hello')
+// }
 
-function main(a,name){
-   a()
-    console.log(name)
+// function main(a,name){
+//    a()
+//     console.log(name)
     
 
-}
-main(cb,'Aziz')
+// }
+// main(cb,'Aziz')
 /*==================================== Question No 41 =========================================
 
 ======================================= Answer =====================================*/
+// obj
+// let obj = {
+//     name: 'Aziz',
+//     age : 23,
+//     info : function(){
+//         console.log(`My name is ${this.name} and my age is ${this.age}`)
 
+//     }
+// }
+// obj.info()
 
+// class second pillar of object 
+// class User {
+//     constructor(name,age){
+//         this.name = name;
+//         this.age = age
+//     }
+//     info(){
+//         return `My name is ${this.name} and my age is ${this.age}`
+//     }
+    
+// }
+// let ans = new User('Ilyas',34)
+// console.log(ans.info())
+
+// class inheritance 
+// class Student {
+//     constructor(name,age){
+//         this.name = name;
+//         this.age = age
+//     }
+// }
+
+// class User extends Student {
+//     constructor(name,age,designation){
+//         super(name,age)
+//         this.designation = designation
+
+//     }
+//     info(){
+//         return `My name is ${this.name} my age is ${this.age} and 
+//         my designation is ${this.designation}`
+//     }
+// }
+// let ans = new User('Pervaix',67,'developer')
+// console.log(ans.info())
 /*==================================== Question No 42 =========================================
-
+polymorphism 
+different classes same funciton name but different behaviour on calling is called 
+polymorphism
 ======================================= Answer =====================================*/
+// class Animal {
+//     speak(){
+//         console.log('Animals are speaking')
+//     }
+// }
 
-
+// class Cat extends Animal {
+//     speak(){
+//         console.log('cats are dringking milk')
+//     }
+// }
+// class Dogs extends Animal {
+//     speak(){
+//         console.log('dogs are barking')
+//     }
+// }
+// class Snakes extends Animal {
+//     speak(){
+//         console.log('snakes are dancing in soil')
+//     }
+// }
+// let a = new Animal();
+// let b = new Cat();
+// let c = new Dogs();
+// let d = new Snakes();
+// a.speak();
+// b.speak();
+// c.speak();
+// d.speak()
 /*==================================== Question No 43 =========================================
-
+encapsulation 
+hiding private data and give access only by specific methods is 
+called encapsulation ,bankAccount example
 ======================================= Answer =====================================*/
+// class BankAccount {
+//     #balance = 0;
+// // deposit
+// deposit(amount){
+//     this.#balance = this.#balance + amount
+// }
+// // withdraw 
+// withdraw(amount){
+//     if(this.#balance > amount){
+//         this.#balance = this.#balance - amount
+//     }
+//     else{
+//         alert('you have insufficient balance')
+//     }
+// }
+//     checkBalance(){
+//         return this.#balance
+//     }
 
+
+// }
+// let ans = new BankAccount();
+// ans.deposit(200)
+// ans.withdraw(1203)
+// console.log(ans.checkBalance())
 
 /*==================================== Question No 44 =========================================
-
+event bubbling and event propagation /
+stopPropagation
 ======================================= Answer =====================================*/
+// function parentFn(){
+//     alert('i am parent function')
+// }
 
+// function childFn(event){
+//     alert('i am child function')
+//     event.stopPropagation()
+// }
 
 /*==================================== Question No 45 =========================================
-
+promise is and object that is used for handling asynchrounous tasks
 ======================================= Answer =====================================*/
-
+// let prom = new Promise((resolve,reject)=>{
+//     let num = prompt('enter number')
+//     if(num > 20){resolve('promise  has resolved')}
+//     else{reject('promise rejected')}
+// })
+// .then((success)=>alert(success))
+// .catch((error)=>alert(error))
 
 /*==================================== Question No 46 =========================================
-
+async await
 ======================================= Answer =====================================*/
-
-
+// let fn = async()=>{
+//     let apiUrl = 'https://jsonplaceholder.typicode.com/users';
+//     let data = await fetch(apiUrl);
+//     let realData = await data.json();
+//     console.log(realData)
+//     show(realData)
+// }
+// fn()
+// let show = (d)=>{
+//     let display = document.getElementById('ul');
+//     display.innerHTML = d.map((item)=>{
+//         return `<li>${item.id} ${item.name}</li>`
+//     }).join('')
+    
+// }
 /*==================================== Question No 47 =========================================
 
 ======================================= Answer =====================================*/
-
+function abc(){
+     let apiUrl = 'https://jsonplaceholder.typicode.com/users';
+     setTimeout(() => {
+        fetch(apiUrl)
+     .then((ana)=>ana.json())
+     .then((reply)=>console.log(reply))
+     .catch((error)=>console.log(error))
+        
+     }, 2000);
+}
+abc()
+console.log('hello')
 
 /*==================================== Question No 48 =========================================
 
