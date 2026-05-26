@@ -1068,27 +1068,24 @@ closure function
 recursion function 
 call iteself again and again inside itself
 ======================================= Answer =====================================*/
-// function abc(){
-//     let input = prompt('enter text');
-//     if(input == ''){
-//         abc(input)
-//     }
-//     console.log(input)
-// }
-// abc()
-
-// function m(number){
-//     if(number <=0){
-//         console.log('done');
-      
-//     }
-//     else{
-//         m(number - 1)
-//     }
-//     console.log(number)
-
-// }
-// m(5)
+function abc(){
+    let input = prompt('enter text');
+    if(input == ''){
+        abc(input)
+    }
+    console.log(input)
+}
+abc()
+function m(number){
+    if(number <=0){
+        console.log('done');   
+    }
+    else{
+        m(number - 1)
+    }
+    console.log(number)
+}
+m(5)
 /*==================================== Question No 65 =========================================
 map array method
 ======================================= Answer =====================================*/
